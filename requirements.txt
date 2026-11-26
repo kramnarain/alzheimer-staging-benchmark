@@ -1,0 +1,19 @@
+# Python dependencies for the benchmark. Install torch/torchvision for your own CUDA
+# build per https://pytorch.org (Kaggle and Colab already ship one, so do not reinstall
+# there). Vision-xLSTM is not on PyPI: install it from github.com/NX-AI/vision-lstm.
+# Vision-RWKV and MambAD are pure PyTorch (08_models.py) and need no extra package.
+torch
+torchvision
+timm                 # ConvNeXt-Tiny pretrained backbone
+vision_lstm          # Vision-xLSTM (VisionLSTM2); from github.com/NX-AI/vision-lstm
+kappamodules         # required by vision_lstm
+einops               # required by vision_lstm
+numpy
+pandas
+pillow
+scikit-learn         # metric suite (balanced accuracy, AUC, MCC, kappa, log-loss)
+scikit-image         # texture/LBP features for the machine-learning baseline
+SimpleITK            # N4 bias correction and registration in the preprocessing
+nibabel              # NIfTI I/O
+scipy                # significance tests in the figure script
+matplotlib           # figures
